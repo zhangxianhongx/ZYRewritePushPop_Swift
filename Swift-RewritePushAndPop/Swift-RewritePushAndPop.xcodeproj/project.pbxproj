@@ -1,0 +1,599 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0028AF7A1E93B34600B6B4C9 /* ScaleAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0028AF791E93B34600B6B4C9 /* ScaleAnimation.swift */; };
+		860011F31E8F8C12003C8967 /* PushViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 860011F11E8F8C12003C8967 /* PushViewController.swift */; };
+		860011F41E8F8C12003C8967 /* PushViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 860011F21E8F8C12003C8967 /* PushViewController.xib */; };
+		860997181E94874200612736 /* RoundAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 860997171E94874200612736 /* RoundAnimation.swift */; };
+		861EFFB71E95DBA4001C7CD5 /* FlipOverAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 861EFFB61E95DBA4001C7CD5 /* FlipOverAnimation.swift */; };
+		861EFFB91E9603F7001C7CD5 /* AccumulateAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 861EFFB81E9603F7001C7CD5 /* AccumulateAnimation.swift */; };
+		867ED5681E8DF6CD0058F6B9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 867ED5671E8DF6CD0058F6B9 /* AppDelegate.swift */; };
+		867ED56A1E8DF6CD0058F6B9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 867ED5691E8DF6CD0058F6B9 /* ViewController.swift */; };
+		867ED56D1E8DF6CD0058F6B9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 867ED56B1E8DF6CD0058F6B9 /* Main.storyboard */; };
+		867ED56F1E8DF6CD0058F6B9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 867ED56E1E8DF6CD0058F6B9 /* Assets.xcassets */; };
+		867ED5721E8DF6CD0058F6B9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 867ED5701E8DF6CD0058F6B9 /* LaunchScreen.storyboard */; };
+		867ED57D1E8DF6CD0058F6B9 /* Swift_RewritePushAndPopTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 867ED57C1E8DF6CD0058F6B9 /* Swift_RewritePushAndPopTests.swift */; };
+		867ED5881E8DF6CD0058F6B9 /* Swift_RewritePushAndPopUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 867ED5871E8DF6CD0058F6B9 /* Swift_RewritePushAndPopUITests.swift */; };
+		867ED5971E8DF70D0058F6B9 /* BaseNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 867ED5961E8DF70D0058F6B9 /* BaseNavigationController.swift */; };
+		867ED59A1E8DF8970058F6B9 /* left-arrow@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 867ED5981E8DF8970058F6B9 /* left-arrow@2x.png */; };
+		867ED59B1E8DF8970058F6B9 /* left-arrow@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 867ED5991E8DF8970058F6B9 /* left-arrow@3x.png */; };
+		867ED5A51E8E43180058F6B9 /* ZYViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 867ED5A41E8E43180058F6B9 /* ZYViewControllerExtension.swift */; };
+		8691D4221E975BD900309962 /* Animator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8691D4211E975BD900309962 /* Animator.swift */; };
+		8691D4241E975BE700309962 /* Ex_Dispatch_Once.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8691D4231E975BE700309962 /* Ex_Dispatch_Once.swift */; };
+		869492851E9C86470093AB2D /* RevolveAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 869492841E9C86470093AB2D /* RevolveAnimation.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		867ED5791E8DF6CD0058F6B9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 867ED55C1E8DF6CD0058F6B9 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 867ED5631E8DF6CD0058F6B9;
+			remoteInfo = "Swift-RewritePushAndPop";
+		};
+		867ED5841E8DF6CD0058F6B9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 867ED55C1E8DF6CD0058F6B9 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 867ED5631E8DF6CD0058F6B9;
+			remoteInfo = "Swift-RewritePushAndPop";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		0028AF791E93B34600B6B4C9 /* ScaleAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScaleAnimation.swift; sourceTree = "<group>"; };
+		860011F11E8F8C12003C8967 /* PushViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PushViewController.swift; sourceTree = "<group>"; };
+		860011F21E8F8C12003C8967 /* PushViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PushViewController.xib; sourceTree = "<group>"; };
+		860997171E94874200612736 /* RoundAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundAnimation.swift; sourceTree = "<group>"; };
+		861EFFB61E95DBA4001C7CD5 /* FlipOverAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FlipOverAnimation.swift; sourceTree = "<group>"; };
+		861EFFB81E9603F7001C7CD5 /* AccumulateAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccumulateAnimation.swift; sourceTree = "<group>"; };
+		867ED5641E8DF6CD0058F6B9 /* Swift-RewritePushAndPop.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Swift-RewritePushAndPop.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		867ED5671E8DF6CD0058F6B9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		867ED5691E8DF6CD0058F6B9 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		867ED56C1E8DF6CD0058F6B9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		867ED56E1E8DF6CD0058F6B9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		867ED5711E8DF6CD0058F6B9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		867ED5731E8DF6CD0058F6B9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		867ED5781E8DF6CD0058F6B9 /* Swift-RewritePushAndPopTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Swift-RewritePushAndPopTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		867ED57C1E8DF6CD0058F6B9 /* Swift_RewritePushAndPopTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Swift_RewritePushAndPopTests.swift; sourceTree = "<group>"; };
+		867ED57E1E8DF6CD0058F6B9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		867ED5831E8DF6CD0058F6B9 /* Swift-RewritePushAndPopUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Swift-RewritePushAndPopUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		867ED5871E8DF6CD0058F6B9 /* Swift_RewritePushAndPopUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Swift_RewritePushAndPopUITests.swift; sourceTree = "<group>"; };
+		867ED5891E8DF6CD0058F6B9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		867ED5961E8DF70D0058F6B9 /* BaseNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseNavigationController.swift; sourceTree = "<group>"; };
+		867ED5981E8DF8970058F6B9 /* left-arrow@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "left-arrow@2x.png"; sourceTree = "<group>"; };
+		867ED5991E8DF8970058F6B9 /* left-arrow@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "left-arrow@3x.png"; sourceTree = "<group>"; };
+		867ED5A41E8E43180058F6B9 /* ZYViewControllerExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZYViewControllerExtension.swift; sourceTree = "<group>"; };
+		8691D4211E975BD900309962 /* Animator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Animator.swift; sourceTree = "<group>"; };
+		8691D4231E975BE700309962 /* Ex_Dispatch_Once.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Ex_Dispatch_Once.swift; sourceTree = "<group>"; };
+		869492841E9C86470093AB2D /* RevolveAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RevolveAnimation.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		867ED5611E8DF6CD0058F6B9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		867ED5751E8DF6CD0058F6B9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		867ED5801E8DF6CD0058F6B9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		867ED55B1E8DF6CD0058F6B9 = {
+			isa = PBXGroup;
+			children = (
+				867ED5661E8DF6CD0058F6B9 /* Swift-RewritePushAndPop */,
+				867ED57B1E8DF6CD0058F6B9 /* Swift-RewritePushAndPopTests */,
+				867ED5861E8DF6CD0058F6B9 /* Swift-RewritePushAndPopUITests */,
+				867ED5651E8DF6CD0058F6B9 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		867ED5651E8DF6CD0058F6B9 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				867ED5641E8DF6CD0058F6B9 /* Swift-RewritePushAndPop.app */,
+				867ED5781E8DF6CD0058F6B9 /* Swift-RewritePushAndPopTests.xctest */,
+				867ED5831E8DF6CD0058F6B9 /* Swift-RewritePushAndPopUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		867ED5661E8DF6CD0058F6B9 /* Swift-RewritePushAndPop */ = {
+			isa = PBXGroup;
+			children = (
+				867ED5951E8DF6F60058F6B9 /* BaseConfiger */,
+				867ED5671E8DF6CD0058F6B9 /* AppDelegate.swift */,
+				867ED5691E8DF6CD0058F6B9 /* ViewController.swift */,
+				867ED56B1E8DF6CD0058F6B9 /* Main.storyboard */,
+				860011F11E8F8C12003C8967 /* PushViewController.swift */,
+				860011F21E8F8C12003C8967 /* PushViewController.xib */,
+				867ED56E1E8DF6CD0058F6B9 /* Assets.xcassets */,
+				867ED5701E8DF6CD0058F6B9 /* LaunchScreen.storyboard */,
+				867ED5731E8DF6CD0058F6B9 /* Info.plist */,
+			);
+			path = "Swift-RewritePushAndPop";
+			sourceTree = "<group>";
+		};
+		867ED57B1E8DF6CD0058F6B9 /* Swift-RewritePushAndPopTests */ = {
+			isa = PBXGroup;
+			children = (
+				867ED57C1E8DF6CD0058F6B9 /* Swift_RewritePushAndPopTests.swift */,
+				867ED57E1E8DF6CD0058F6B9 /* Info.plist */,
+			);
+			path = "Swift-RewritePushAndPopTests";
+			sourceTree = "<group>";
+		};
+		867ED5861E8DF6CD0058F6B9 /* Swift-RewritePushAndPopUITests */ = {
+			isa = PBXGroup;
+			children = (
+				867ED5871E8DF6CD0058F6B9 /* Swift_RewritePushAndPopUITests.swift */,
+				867ED5891E8DF6CD0058F6B9 /* Info.plist */,
+			);
+			path = "Swift-RewritePushAndPopUITests";
+			sourceTree = "<group>";
+		};
+		867ED5951E8DF6F60058F6B9 /* BaseConfiger */ = {
+			isa = PBXGroup;
+			children = (
+				8691D4251E975BF800309962 /* Theme */,
+				867ED5981E8DF8970058F6B9 /* left-arrow@2x.png */,
+				867ED5991E8DF8970058F6B9 /* left-arrow@3x.png */,
+				867ED5961E8DF70D0058F6B9 /* BaseNavigationController.swift */,
+				867ED5A41E8E43180058F6B9 /* ZYViewControllerExtension.swift */,
+				8691D4211E975BD900309962 /* Animator.swift */,
+				0028AF791E93B34600B6B4C9 /* ScaleAnimation.swift */,
+				860997171E94874200612736 /* RoundAnimation.swift */,
+				861EFFB61E95DBA4001C7CD5 /* FlipOverAnimation.swift */,
+				861EFFB81E9603F7001C7CD5 /* AccumulateAnimation.swift */,
+				869492841E9C86470093AB2D /* RevolveAnimation.swift */,
+			);
+			path = BaseConfiger;
+			sourceTree = "<group>";
+		};
+		8691D4251E975BF800309962 /* Theme */ = {
+			isa = PBXGroup;
+			children = (
+				8691D4231E975BE700309962 /* Ex_Dispatch_Once.swift */,
+			);
+			name = Theme;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		867ED5631E8DF6CD0058F6B9 /* Swift-RewritePushAndPop */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 867ED58C1E8DF6CD0058F6B9 /* Build configuration list for PBXNativeTarget "Swift-RewritePushAndPop" */;
+			buildPhases = (
+				867ED5601E8DF6CD0058F6B9 /* Sources */,
+				867ED5611E8DF6CD0058F6B9 /* Frameworks */,
+				867ED5621E8DF6CD0058F6B9 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Swift-RewritePushAndPop";
+			productName = "Swift-RewritePushAndPop";
+			productReference = 867ED5641E8DF6CD0058F6B9 /* Swift-RewritePushAndPop.app */;
+			productType = "com.apple.product-type.application";
+		};
+		867ED5771E8DF6CD0058F6B9 /* Swift-RewritePushAndPopTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 867ED58F1E8DF6CD0058F6B9 /* Build configuration list for PBXNativeTarget "Swift-RewritePushAndPopTests" */;
+			buildPhases = (
+				867ED5741E8DF6CD0058F6B9 /* Sources */,
+				867ED5751E8DF6CD0058F6B9 /* Frameworks */,
+				867ED5761E8DF6CD0058F6B9 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				867ED57A1E8DF6CD0058F6B9 /* PBXTargetDependency */,
+			);
+			name = "Swift-RewritePushAndPopTests";
+			productName = "Swift-RewritePushAndPopTests";
+			productReference = 867ED5781E8DF6CD0058F6B9 /* Swift-RewritePushAndPopTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		867ED5821E8DF6CD0058F6B9 /* Swift-RewritePushAndPopUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 867ED5921E8DF6CD0058F6B9 /* Build configuration list for PBXNativeTarget "Swift-RewritePushAndPopUITests" */;
+			buildPhases = (
+				867ED57F1E8DF6CD0058F6B9 /* Sources */,
+				867ED5801E8DF6CD0058F6B9 /* Frameworks */,
+				867ED5811E8DF6CD0058F6B9 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				867ED5851E8DF6CD0058F6B9 /* PBXTargetDependency */,
+			);
+			name = "Swift-RewritePushAndPopUITests";
+			productName = "Swift-RewritePushAndPopUITests";
+			productReference = 867ED5831E8DF6CD0058F6B9 /* Swift-RewritePushAndPopUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		867ED55C1E8DF6CD0058F6B9 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0800;
+				LastUpgradeCheck = 0800;
+				ORGANIZATIONNAME = ybon;
+				TargetAttributes = {
+					867ED5631E8DF6CD0058F6B9 = {
+						CreatedOnToolsVersion = 8.0;
+						ProvisioningStyle = Automatic;
+					};
+					867ED5771E8DF6CD0058F6B9 = {
+						CreatedOnToolsVersion = 8.0;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 867ED5631E8DF6CD0058F6B9;
+					};
+					867ED5821E8DF6CD0058F6B9 = {
+						CreatedOnToolsVersion = 8.0;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 867ED5631E8DF6CD0058F6B9;
+					};
+				};
+			};
+			buildConfigurationList = 867ED55F1E8DF6CD0058F6B9 /* Build configuration list for PBXProject "Swift-RewritePushAndPop" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 867ED55B1E8DF6CD0058F6B9;
+			productRefGroup = 867ED5651E8DF6CD0058F6B9 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				867ED5631E8DF6CD0058F6B9 /* Swift-RewritePushAndPop */,
+				867ED5771E8DF6CD0058F6B9 /* Swift-RewritePushAndPopTests */,
+				867ED5821E8DF6CD0058F6B9 /* Swift-RewritePushAndPopUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		867ED5621E8DF6CD0058F6B9 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				867ED5721E8DF6CD0058F6B9 /* LaunchScreen.storyboard in Resources */,
+				867ED59A1E8DF8970058F6B9 /* left-arrow@2x.png in Resources */,
+				867ED59B1E8DF8970058F6B9 /* left-arrow@3x.png in Resources */,
+				867ED56F1E8DF6CD0058F6B9 /* Assets.xcassets in Resources */,
+				860011F41E8F8C12003C8967 /* PushViewController.xib in Resources */,
+				867ED56D1E8DF6CD0058F6B9 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		867ED5761E8DF6CD0058F6B9 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		867ED5811E8DF6CD0058F6B9 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		867ED5601E8DF6CD0058F6B9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				869492851E9C86470093AB2D /* RevolveAnimation.swift in Sources */,
+				867ED56A1E8DF6CD0058F6B9 /* ViewController.swift in Sources */,
+				8691D4241E975BE700309962 /* Ex_Dispatch_Once.swift in Sources */,
+				867ED5A51E8E43180058F6B9 /* ZYViewControllerExtension.swift in Sources */,
+				861EFFB91E9603F7001C7CD5 /* AccumulateAnimation.swift in Sources */,
+				0028AF7A1E93B34600B6B4C9 /* ScaleAnimation.swift in Sources */,
+				861EFFB71E95DBA4001C7CD5 /* FlipOverAnimation.swift in Sources */,
+				860997181E94874200612736 /* RoundAnimation.swift in Sources */,
+				867ED5681E8DF6CD0058F6B9 /* AppDelegate.swift in Sources */,
+				860011F31E8F8C12003C8967 /* PushViewController.swift in Sources */,
+				8691D4221E975BD900309962 /* Animator.swift in Sources */,
+				867ED5971E8DF70D0058F6B9 /* BaseNavigationController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		867ED5741E8DF6CD0058F6B9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				867ED57D1E8DF6CD0058F6B9 /* Swift_RewritePushAndPopTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		867ED57F1E8DF6CD0058F6B9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				867ED5881E8DF6CD0058F6B9 /* Swift_RewritePushAndPopUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		867ED57A1E8DF6CD0058F6B9 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 867ED5631E8DF6CD0058F6B9 /* Swift-RewritePushAndPop */;
+			targetProxy = 867ED5791E8DF6CD0058F6B9 /* PBXContainerItemProxy */;
+		};
+		867ED5851E8DF6CD0058F6B9 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 867ED5631E8DF6CD0058F6B9 /* Swift-RewritePushAndPop */;
+			targetProxy = 867ED5841E8DF6CD0058F6B9 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		867ED56B1E8DF6CD0058F6B9 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				867ED56C1E8DF6CD0058F6B9 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		867ED5701E8DF6CD0058F6B9 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				867ED5711E8DF6CD0058F6B9 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		867ED58A1E8DF6CD0058F6B9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		867ED58B1E8DF6CD0058F6B9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		867ED58D1E8DF6CD0058F6B9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "Swift-RewritePushAndPop/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "ybon.Swift-RewritePushAndPop";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		867ED58E1E8DF6CD0058F6B9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "Swift-RewritePushAndPop/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "ybon.Swift-RewritePushAndPop";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+		867ED5901E8DF6CD0058F6B9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = "Swift-RewritePushAndPopTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "ybon.Swift-RewritePushAndPopTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Swift-RewritePushAndPop.app/Swift-RewritePushAndPop";
+			};
+			name = Debug;
+		};
+		867ED5911E8DF6CD0058F6B9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = "Swift-RewritePushAndPopTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "ybon.Swift-RewritePushAndPopTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Swift-RewritePushAndPop.app/Swift-RewritePushAndPop";
+			};
+			name = Release;
+		};
+		867ED5931E8DF6CD0058F6B9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				INFOPLIST_FILE = "Swift-RewritePushAndPopUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "ybon.Swift-RewritePushAndPopUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = "Swift-RewritePushAndPop";
+			};
+			name = Debug;
+		};
+		867ED5941E8DF6CD0058F6B9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				INFOPLIST_FILE = "Swift-RewritePushAndPopUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "ybon.Swift-RewritePushAndPopUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = "Swift-RewritePushAndPop";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		867ED55F1E8DF6CD0058F6B9 /* Build configuration list for PBXProject "Swift-RewritePushAndPop" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				867ED58A1E8DF6CD0058F6B9 /* Debug */,
+				867ED58B1E8DF6CD0058F6B9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		867ED58C1E8DF6CD0058F6B9 /* Build configuration list for PBXNativeTarget "Swift-RewritePushAndPop" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				867ED58D1E8DF6CD0058F6B9 /* Debug */,
+				867ED58E1E8DF6CD0058F6B9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		867ED58F1E8DF6CD0058F6B9 /* Build configuration list for PBXNativeTarget "Swift-RewritePushAndPopTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				867ED5901E8DF6CD0058F6B9 /* Debug */,
+				867ED5911E8DF6CD0058F6B9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		867ED5921E8DF6CD0058F6B9 /* Build configuration list for PBXNativeTarget "Swift-RewritePushAndPopUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				867ED5931E8DF6CD0058F6B9 /* Debug */,
+				867ED5941E8DF6CD0058F6B9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 867ED55C1E8DF6CD0058F6B9 /* Project object */;
+}
