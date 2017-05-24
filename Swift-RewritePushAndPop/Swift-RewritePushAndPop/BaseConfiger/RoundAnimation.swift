@@ -20,7 +20,7 @@ class RoundAnimation: NSObject ,UIViewControllerAnimatedTransitioning{
         let bounds = UIScreen.main.bounds;
         let containerView = transitionsContext.containerView;
         containerView.addSubview((toVC?.view)!);
-        
+        toVC?.view.frame = bounds;
         let frame = CGRect.init(x: UIScreen.main.bounds.size.width/2.0, y: UIScreen.main.bounds.size.height/2.0, width: 1, height: 1);
         
         var maxRadiu:Float = 0;
@@ -36,7 +36,7 @@ class RoundAnimation: NSObject ,UIViewControllerAnimatedTransitioning{
             maxRadiu = maxRadiu > sqrtf(Float(x * x) + Float(y * y)) ? maxRadiu:sqrtf(Float(x * x) + Float(y * y));
         }
         let startPath = UIBezierPath.init(ovalIn: frame);
-        let endPath = UIBezierPath.init(ovalIn: CGRect.init(x: p4.x*1.5, y: 0, width: CGFloat(-maxRadiu), height: CGFloat(maxRadiu)));
+        let endPath = UIBezierPath.init(ovalIn: CGRect.init(x: p4.x*1.5, y: -50, width: CGFloat(-maxRadiu), height: CGFloat(maxRadiu)));
         let maskLayer = CAShapeLayer.init();
         maskLayer.path = endPath.cgPath;
         toVC?.view.layer.mask = maskLayer;
@@ -52,6 +52,7 @@ class RoundAnimation: NSObject ,UIViewControllerAnimatedTransitioning{
         let delay = DispatchTime.now() + duration;
         DispatchQueue.main.asyncAfter(deadline: delay) {
             toVC?.view.frame = CGRect.init(x: 0, y: 0, width: UIScreen.main.bounds.size.width, height: UIScreen.main.bounds.size.height);
+            
             toVC?.view.center = containerView.center;
             toVC?.navigationController?.view.frame = bounds;
             formVC?.view.isHidden = false;

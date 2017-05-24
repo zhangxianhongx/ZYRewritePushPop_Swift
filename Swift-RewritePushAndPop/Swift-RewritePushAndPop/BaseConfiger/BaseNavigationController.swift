@@ -15,7 +15,7 @@ class BaseNavigationController: UINavigationController ,UINavigationControllerDe
         let attrDic = [NSFontAttributeName:UIFont.systemFont(ofSize: 17),NSForegroundColorAttributeName:UIColor.white];
         
         self.navigationBar.titleTextAttributes = attrDic;
-        self.navigationBar.barTintColor = UIColor.init(colorLiteralRed: 176/255.0, green: 11/255.0, blue: 19/255.0, alpha: 1.0);
+        self.navigationBar.barTintColor = UIColor.init(colorLiteralRed: 26/255.0, green: 91/255.0, blue: 150/255.0, alpha: 1.0);
         self.delegate = self;
     }
     func setStatusColor(){

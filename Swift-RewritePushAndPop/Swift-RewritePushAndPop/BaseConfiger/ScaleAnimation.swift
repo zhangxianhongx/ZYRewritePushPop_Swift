@@ -33,7 +33,7 @@ class ScaleAnimation: NSObject,UIViewControllerAnimatedTransitioning{
             toVC?.view.center = containerView.center;
             
             }) { (isSure) in
-
+                toVC?.view.frame = bounds;
                 formVC?.view.isHidden = false;
                 transitionsContext.completeTransition(true);
         }
