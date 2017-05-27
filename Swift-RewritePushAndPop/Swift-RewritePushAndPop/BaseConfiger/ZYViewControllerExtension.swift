@@ -53,6 +53,14 @@ enum UIViewControllerAnimationTypeName {
      * 旋转动画
      */
     case revolveAnimation
+    /**
+     左右扫描
+     */
+    case rlScanAnimation
+    /**
+     上下扫描
+     */
+    case tbScanAnimation
 }
 /**
  * 确定对象使用的哪一种动画
@@ -101,6 +109,14 @@ func getAnimationWithAnimationType(animationTyp:UIViewControllerAnimationTypeNam
         return animation;
     case .revolveAnimation:
         let animation = RevolveAnimation.init();
+        animation.transitionType = operation;
+        return animation;
+    case .rlScanAnimation:
+        let animation = RLScanAnimation.init();
+        animation.transitionType = operation;
+        return animation;
+    case .tbScanAnimation:
+        let animation = TBScanAnimation.init();
         animation.transitionType = operation;
         return animation;
         

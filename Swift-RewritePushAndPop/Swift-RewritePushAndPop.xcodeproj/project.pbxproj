@@ -27,6 +27,8 @@
 		8691D4221E975BD900309962 /* Animator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8691D4211E975BD900309962 /* Animator.swift */; };
 		8691D4241E975BE700309962 /* Ex_Dispatch_Once.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8691D4231E975BE700309962 /* Ex_Dispatch_Once.swift */; };
 		869492851E9C86470093AB2D /* RevolveAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 869492841E9C86470093AB2D /* RevolveAnimation.swift */; };
+		86DB5C8B1ED92CEE00C6F71E /* RLScanAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86DB5C8A1ED92CEE00C6F71E /* RLScanAnimation.swift */; };
+		86DB5C8D1ED92D6D00C6F71E /* TBScanAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86DB5C8C1ED92D6D00C6F71E /* TBScanAnimation.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -73,6 +75,8 @@
 		8691D4211E975BD900309962 /* Animator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Animator.swift; sourceTree = "<group>"; };
 		8691D4231E975BE700309962 /* Ex_Dispatch_Once.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Ex_Dispatch_Once.swift; sourceTree = "<group>"; };
 		869492841E9C86470093AB2D /* RevolveAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RevolveAnimation.swift; sourceTree = "<group>"; };
+		86DB5C8A1ED92CEE00C6F71E /* RLScanAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RLScanAnimation.swift; sourceTree = "<group>"; };
+		86DB5C8C1ED92D6D00C6F71E /* TBScanAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TBScanAnimation.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -168,6 +172,8 @@
 				861EFFB61E95DBA4001C7CD5 /* FlipOverAnimation.swift */,
 				861EFFB81E9603F7001C7CD5 /* AccumulateAnimation.swift */,
 				869492841E9C86470093AB2D /* RevolveAnimation.swift */,
+				86DB5C8A1ED92CEE00C6F71E /* RLScanAnimation.swift */,
+				86DB5C8C1ED92D6D00C6F71E /* TBScanAnimation.swift */,
 			);
 			path = BaseConfiger;
 			sourceTree = "<group>";
@@ -320,12 +326,14 @@
 				869492851E9C86470093AB2D /* RevolveAnimation.swift in Sources */,
 				867ED56A1E8DF6CD0058F6B9 /* ViewController.swift in Sources */,
 				8691D4241E975BE700309962 /* Ex_Dispatch_Once.swift in Sources */,
+				86DB5C8D1ED92D6D00C6F71E /* TBScanAnimation.swift in Sources */,
 				867ED5A51E8E43180058F6B9 /* ZYViewControllerExtension.swift in Sources */,
 				861EFFB91E9603F7001C7CD5 /* AccumulateAnimation.swift in Sources */,
 				0028AF7A1E93B34600B6B4C9 /* ScaleAnimation.swift in Sources */,
 				861EFFB71E95DBA4001C7CD5 /* FlipOverAnimation.swift in Sources */,
 				860997181E94874200612736 /* RoundAnimation.swift in Sources */,
 				867ED5681E8DF6CD0058F6B9 /* AppDelegate.swift in Sources */,
+				86DB5C8B1ED92CEE00C6F71E /* RLScanAnimation.swift in Sources */,
 				860011F31E8F8C12003C8967 /* PushViewController.swift in Sources */,
 				8691D4221E975BD900309962 /* Animator.swift in Sources */,
 				867ED5971E8DF70D0058F6B9 /* BaseNavigationController.swift in Sources */,

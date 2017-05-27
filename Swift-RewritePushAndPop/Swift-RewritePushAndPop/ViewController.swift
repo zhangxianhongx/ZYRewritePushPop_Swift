@@ -11,7 +11,7 @@ import UIKit
 class ViewController: UIViewController ,UITableViewDelegate,UITableViewDataSource{
 
     private var _tableView:UITableView?;
-    private var _typeArray = ["翻页效果","淡入淡出","立方体翻转","吸纸效果","水波效果","缩放效果","切圆效果","翻转效果","单一填充效果","旋转效果"];
+    private var _typeArray = ["翻页效果","淡入淡出","立方体翻转","吸纸效果","水波效果","缩放效果","切圆效果","翻转效果","单一填充效果","旋转效果","左右扫描","上下扫描"];
     override func viewDidLoad() {
         super.viewDidLoad()
         self.automaticallyAdjustsScrollViewInsets = false;
@@ -60,6 +60,10 @@ class ViewController: UIViewController ,UITableViewDelegate,UITableViewDataSourc
             VC.animationType = .accumulateAnimation;
         case 9:
             VC.animationType = .revolveAnimation;
+        case 10:
+            VC.animationType = .rlScanAnimation;
+        case 11:
+            VC.animationType = .tbScanAnimation;
         default:
             break;
         }
