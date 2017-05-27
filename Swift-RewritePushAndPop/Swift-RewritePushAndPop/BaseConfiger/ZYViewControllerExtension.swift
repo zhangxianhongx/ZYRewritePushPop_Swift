@@ -97,6 +97,17 @@ func getAnimationWithAnimationType(animationTyp:UIViewControllerAnimationTypeNam
         return animation;
     case .roundAnimation:
         let animation = RoundAnimation.init();
+        animation.animationDirection = .Round;
+        animation.transitionType = operation;
+        return animation;
+    case .rlScanAnimation:
+        let animation = RoundAnimation.init();
+        animation.animationDirection = .RightLeft;
+        animation.transitionType = operation;
+        return animation;
+    case .tbScanAnimation:
+        let animation = RoundAnimation.init();
+        animation.animationDirection = .TopButtom;
         animation.transitionType = operation;
         return animation;
     case .flipOverAnimation:
@@ -111,14 +122,7 @@ func getAnimationWithAnimationType(animationTyp:UIViewControllerAnimationTypeNam
         let animation = RevolveAnimation.init();
         animation.transitionType = operation;
         return animation;
-    case .rlScanAnimation:
-        let animation = RLScanAnimation.init();
-        animation.transitionType = operation;
-        return animation;
-    case .tbScanAnimation:
-        let animation = TBScanAnimation.init();
-        animation.transitionType = operation;
-        return animation;
+    
         
     }
     

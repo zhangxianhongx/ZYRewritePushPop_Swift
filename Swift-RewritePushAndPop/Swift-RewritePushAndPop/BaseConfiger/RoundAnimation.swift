@@ -7,11 +7,18 @@
 //
 
 import UIKit
-
+enum AnimationDirection {
+    /**圆形*/
+    case Round
+    /**左右*/
+    case RightLeft
+    /**上下*/
+    case TopButtom
+}
 class RoundAnimation: NSObject ,UIViewControllerAnimatedTransitioning{
     
     var transitionType:UINavigationControllerOperation?;
-    
+    var animationDirection:AnimationDirection?;
     
     func push(transitionsContext:UIViewControllerContextTransitioning){
         let formVC = transitionsContext.viewController(forKey: UITransitionContextViewControllerKey.from);
@@ -35,8 +42,19 @@ class RoundAnimation: NSObject ,UIViewControllerAnimatedTransitioning{
             let y = p.y;
             maxRadiu = maxRadiu > sqrtf(Float(x * x) + Float(y * y)) ? maxRadiu:sqrtf(Float(x * x) + Float(y * y));
         }
-        let startPath = UIBezierPath.init(ovalIn: frame);
-        let endPath = UIBezierPath.init(ovalIn: CGRect.init(x: p4.x*1.5, y: -50, width: CGFloat(-maxRadiu), height: CGFloat(maxRadiu)));
+        var startPath = UIBezierPath.init(ovalIn: frame);
+        var endPath = UIBezierPath.init(ovalIn: CGRect.init(x: p4.x*1.5, y: -50, width: CGFloat(-maxRadiu), height: CGFloat(maxRadiu)));
+        
+        if animationDirection == .RightLeft {
+            startPath = UIBezierPath.init(rect: CGRect.init(x:bounds.size.width, y: 0, width: 0, height: bounds.size.height));
+            endPath = UIBezierPath.init(rect: CGRect.init(x: 0, y: 0, width: bounds.size.width, height: bounds.size.height));
+            
+        }else if animationDirection == .TopButtom{
+            
+            startPath = UIBezierPath.init(rect: CGRect.init(x:0, y: bounds.size.height, width: bounds.size.width, height:0));
+            endPath = UIBezierPath.init(rect: CGRect.init(x: 0, y: 0, width: bounds.size.width, height: bounds.size.height));
+        }
+        
         let maskLayer = CAShapeLayer.init();
         maskLayer.path = endPath.cgPath;
         toVC?.view.layer.mask = maskLayer;
@@ -85,9 +103,19 @@ class RoundAnimation: NSObject ,UIViewControllerAnimatedTransitioning{
             let y = p.y;
             maxRadiu = maxRadiu > sqrtf(Float(x * x) + Float(y * y)) ? maxRadiu:sqrtf(Float(x * x) + Float(y * y));
         }
-        let endPath = UIBezierPath.init(ovalIn: frame);
+        var endPath = UIBezierPath.init(ovalIn: frame);
         
-        let startPath = UIBezierPath.init(ovalIn: CGRect.init(x: p4.x*1.5, y:0, width: CGFloat(-maxRadiu), height: CGFloat(maxRadiu)));
+        var startPath = UIBezierPath.init(ovalIn: CGRect.init(x: p4.x*1.5, y:0, width: CGFloat(-maxRadiu), height: CGFloat(maxRadiu)));
+        if animationDirection == .RightLeft {
+            endPath = UIBezierPath.init(rect: CGRect.init(x:bounds.size.width, y: 0, width: 0, height: bounds.size.height));
+            startPath = UIBezierPath.init(rect: CGRect.init(x: 0, y: 0, width: bounds.size.width, height: bounds.size.height));
+            
+        }else if animationDirection == .TopButtom{
+            endPath = UIBezierPath.init(rect: CGRect.init(x:0, y: bounds.size.height, width: bounds.size.width, height:0));
+            startPath = UIBezierPath.init(rect: CGRect.init(x: 0, y: 0, width: bounds.size.width, height: bounds.size.height));
+            
+        }
+        
         let maskLayer = CAShapeLayer.init();
         maskLayer.path = endPath.cgPath;
         formVC?.view.layer.mask = maskLayer;
