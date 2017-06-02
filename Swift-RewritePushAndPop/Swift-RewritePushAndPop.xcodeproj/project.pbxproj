@@ -10,6 +10,7 @@
 		0028AF7A1E93B34600B6B4C9 /* ScaleAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0028AF791E93B34600B6B4C9 /* ScaleAnimation.swift */; };
 		860011F31E8F8C12003C8967 /* PushViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 860011F11E8F8C12003C8967 /* PushViewController.swift */; };
 		860011F41E8F8C12003C8967 /* PushViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 860011F21E8F8C12003C8967 /* PushViewController.xib */; };
+		86022F371EDE6A9B007C2FB4 /* PiecesAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86022F361EDE6A9B007C2FB4 /* PiecesAnimation.swift */; };
 		860997181E94874200612736 /* RoundAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 860997171E94874200612736 /* RoundAnimation.swift */; };
 		861EFFB71E95DBA4001C7CD5 /* FlipOverAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 861EFFB61E95DBA4001C7CD5 /* FlipOverAnimation.swift */; };
 		861EFFB91E9603F7001C7CD5 /* AccumulateAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 861EFFB81E9603F7001C7CD5 /* AccumulateAnimation.swift */; };
@@ -50,6 +51,7 @@
 		0028AF791E93B34600B6B4C9 /* ScaleAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScaleAnimation.swift; sourceTree = "<group>"; };
 		860011F11E8F8C12003C8967 /* PushViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PushViewController.swift; sourceTree = "<group>"; };
 		860011F21E8F8C12003C8967 /* PushViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PushViewController.xib; sourceTree = "<group>"; };
+		86022F361EDE6A9B007C2FB4 /* PiecesAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PiecesAnimation.swift; sourceTree = "<group>"; };
 		860997171E94874200612736 /* RoundAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundAnimation.swift; sourceTree = "<group>"; };
 		861EFFB61E95DBA4001C7CD5 /* FlipOverAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FlipOverAnimation.swift; sourceTree = "<group>"; };
 		861EFFB81E9603F7001C7CD5 /* AccumulateAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccumulateAnimation.swift; sourceTree = "<group>"; };
@@ -168,6 +170,7 @@
 				861EFFB61E95DBA4001C7CD5 /* FlipOverAnimation.swift */,
 				861EFFB81E9603F7001C7CD5 /* AccumulateAnimation.swift */,
 				869492841E9C86470093AB2D /* RevolveAnimation.swift */,
+				86022F361EDE6A9B007C2FB4 /* PiecesAnimation.swift */,
 			);
 			path = BaseConfiger;
 			sourceTree = "<group>";
@@ -328,6 +331,7 @@
 				867ED5681E8DF6CD0058F6B9 /* AppDelegate.swift in Sources */,
 				860011F31E8F8C12003C8967 /* PushViewController.swift in Sources */,
 				8691D4221E975BD900309962 /* Animator.swift in Sources */,
+				86022F371EDE6A9B007C2FB4 /* PiecesAnimation.swift in Sources */,
 				867ED5971E8DF70D0058F6B9 /* BaseNavigationController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
