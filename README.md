@@ -10,8 +10,8 @@
 # 使用介绍：
 
 1，将源码中的BaseConfiger文件夹下文件全部拖入项目 <br>
-2，BaseNavigationController的作用大家都知道，如果你是用的xib那么请将xib继承它 <br>
-在BaseNavigationController中，开发者可更改导航栏的属性，如导航栏颜色，标题颜色等等
+2，BaseNavigationController的作用大家都知道，如果你是用的xib那么请将xib继承它 
+在BaseNavigationController中，开发者可更改导航栏的属性，如导航栏颜色，标题颜色等等 <br>
 3，ZYViewControllerExtension的作用 
 ZYViewControllerExtension是一个中转处理类，用来处理各种动画以及给push和pop配置动画 <br>
 
