@@ -1,6 +1,7 @@
 # 效果图 <br>
 ![image](https://github.com/zhangxianhongx/ZYRewritePushPop_Swift/blob/master/01.gif) <br>
-
+#本库以支持pod安装，库名为ZYPushPop <br>
+pod 'ZYPushPop' <br>
 # ZYRewritePushPop_Swift <br>
 1，自定义push和pop功能，多动动画，随意配置 <br>
 2，可为任何Controller单独配置相应的动画 <br>
