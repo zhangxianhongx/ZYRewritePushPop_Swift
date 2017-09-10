@@ -12,7 +12,11 @@ import UIKit
  *   动画类型枚举
  *   后期开发若要添加新的动画，只需把动画类型加入枚举即可
  */
-enum UIViewControllerAnimationTypeName {
+@objc public enum UIViewControllerAnimationTypeName:Int {
+    /**
+     系统动画
+     */
+    case noneAnimation
     /**
      * 翻页效果
      */
@@ -97,17 +101,18 @@ func getAnimationWithAnimationType(animationTyp:UIViewControllerAnimationTypeNam
         return animation;
     case .roundAnimation:
         let animation = RoundAnimation.init();
-        animation.animationDirection = .Round;
+//        animation.animationDirection = .Round;
+        animation.animationDirection = .round;
         animation.transitionType = operation;
         return animation;
     case .rlScanAnimation:
         let animation = RoundAnimation.init();
-        animation.animationDirection = .RightLeft;
+        animation.animationDirection = .rightLeft;
         animation.transitionType = operation;
         return animation;
     case .tbScanAnimation:
         let animation = RoundAnimation.init();
-        animation.animationDirection = .TopButtom;
+        animation.animationDirection = .topButtom;
         animation.transitionType = operation;
         return animation;
     case .flipOverAnimation:
@@ -122,7 +127,8 @@ func getAnimationWithAnimationType(animationTyp:UIViewControllerAnimationTypeNam
         let animation = RevolveAnimation.init();
         animation.transitionType = operation;
         return animation;
-    
+    case .noneAnimation:
+        return nil;
         
     }
     
@@ -135,26 +141,22 @@ func getAnimationWithAnimationType(animationTyp:UIViewControllerAnimationTypeNam
  *  为所有UIViewController及其子类添加上述枚举类型属性
  *  给某个Controller定义动画时，只需给属性赋上相应动画类型
  */
-extension UIViewController{
+public extension UIViewController{
     
     private static var animationTypeKey = "animationTypeKey";
-    var animationType:UIViewControllerAnimationTypeName?{
+    
+   public var animationType:UIViewControllerAnimationTypeName{
         set {
             objc_setAssociatedObject(self,  &UIViewController.animationTypeKey, newValue, objc_AssociationPolicy.OBJC_ASSOCIATION_RETAIN_NONATOMIC);
         }
         get {
-            return objc_getAssociatedObject(self, &UIViewController.animationTypeKey) as! UIViewControllerAnimationTypeName?;
+            if objc_getAssociatedObject(self, &UIViewController.animationTypeKey) is UIViewControllerAnimationTypeName {
+                
+                return (objc_getAssociatedObject(self, &UIViewController.animationTypeKey) as? UIViewControllerAnimationTypeName)!;
+            }
+            
+            return UIViewControllerAnimationTypeName(rawValue: 0)!;
         }
     }
-    /* 待确定功能
-    private static var animationNameKey = "animationNameKey";
-    var animationName : String?{
-        set {
-            objc_setAssociatedObject(self,  &UIViewController.animationNameKey, newValue, objc_AssociationPolicy.OBJC_ASSOCIATION_RETAIN_NONATOMIC);
-        }
-        get {
-            return objc_getAssociatedObject(self, &UIViewController.animationNameKey) as? String;
-        }
-    }
-    */
+    
 }

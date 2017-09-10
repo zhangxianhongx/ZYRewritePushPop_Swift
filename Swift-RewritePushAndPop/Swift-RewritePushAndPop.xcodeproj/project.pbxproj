@@ -7,13 +7,20 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0028AF7A1E93B34600B6B4C9 /* ScaleAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0028AF791E93B34600B6B4C9 /* ScaleAnimation.swift */; };
+		0045E85D1F6557DB0064A4CD /* AccumulateAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0045E8511F6557DB0064A4CD /* AccumulateAnimation.swift */; };
+		0045E85E1F6557DB0064A4CD /* Animator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0045E8521F6557DB0064A4CD /* Animator.swift */; };
+		0045E85F1F6557DB0064A4CD /* BaseNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0045E8531F6557DB0064A4CD /* BaseNavigationController.swift */; };
+		0045E8601F6557DB0064A4CD /* Ex_Dispatch_Once.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0045E8541F6557DB0064A4CD /* Ex_Dispatch_Once.swift */; };
+		0045E8611F6557DB0064A4CD /* FlipOverAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0045E8551F6557DB0064A4CD /* FlipOverAnimation.swift */; };
+		0045E8621F6557DB0064A4CD /* PiecesAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0045E8561F6557DB0064A4CD /* PiecesAnimation.swift */; };
+		0045E8631F6557DB0064A4CD /* RevolveAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0045E8571F6557DB0064A4CD /* RevolveAnimation.swift */; };
+		0045E8641F6557DB0064A4CD /* RoundAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0045E8581F6557DB0064A4CD /* RoundAnimation.swift */; };
+		0045E8651F6557DB0064A4CD /* ScaleAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0045E8591F6557DB0064A4CD /* ScaleAnimation.swift */; };
+		0045E8661F6557DB0064A4CD /* ZYViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0045E85A1F6557DB0064A4CD /* ZYViewControllerExtension.swift */; };
+		0045E8671F6557DB0064A4CD /* left-arrow@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0045E85B1F6557DB0064A4CD /* left-arrow@2x.png */; };
+		0045E8681F6557DB0064A4CD /* left-arrow@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0045E85C1F6557DB0064A4CD /* left-arrow@3x.png */; };
 		860011F31E8F8C12003C8967 /* PushViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 860011F11E8F8C12003C8967 /* PushViewController.swift */; };
 		860011F41E8F8C12003C8967 /* PushViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 860011F21E8F8C12003C8967 /* PushViewController.xib */; };
-		86022F371EDE6A9B007C2FB4 /* PiecesAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86022F361EDE6A9B007C2FB4 /* PiecesAnimation.swift */; };
-		860997181E94874200612736 /* RoundAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 860997171E94874200612736 /* RoundAnimation.swift */; };
-		861EFFB71E95DBA4001C7CD5 /* FlipOverAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 861EFFB61E95DBA4001C7CD5 /* FlipOverAnimation.swift */; };
-		861EFFB91E9603F7001C7CD5 /* AccumulateAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 861EFFB81E9603F7001C7CD5 /* AccumulateAnimation.swift */; };
 		867ED5681E8DF6CD0058F6B9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 867ED5671E8DF6CD0058F6B9 /* AppDelegate.swift */; };
 		867ED56A1E8DF6CD0058F6B9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 867ED5691E8DF6CD0058F6B9 /* ViewController.swift */; };
 		867ED56D1E8DF6CD0058F6B9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 867ED56B1E8DF6CD0058F6B9 /* Main.storyboard */; };
@@ -21,13 +28,6 @@
 		867ED5721E8DF6CD0058F6B9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 867ED5701E8DF6CD0058F6B9 /* LaunchScreen.storyboard */; };
 		867ED57D1E8DF6CD0058F6B9 /* Swift_RewritePushAndPopTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 867ED57C1E8DF6CD0058F6B9 /* Swift_RewritePushAndPopTests.swift */; };
 		867ED5881E8DF6CD0058F6B9 /* Swift_RewritePushAndPopUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 867ED5871E8DF6CD0058F6B9 /* Swift_RewritePushAndPopUITests.swift */; };
-		867ED5971E8DF70D0058F6B9 /* BaseNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 867ED5961E8DF70D0058F6B9 /* BaseNavigationController.swift */; };
-		867ED59A1E8DF8970058F6B9 /* left-arrow@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 867ED5981E8DF8970058F6B9 /* left-arrow@2x.png */; };
-		867ED59B1E8DF8970058F6B9 /* left-arrow@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 867ED5991E8DF8970058F6B9 /* left-arrow@3x.png */; };
-		867ED5A51E8E43180058F6B9 /* ZYViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 867ED5A41E8E43180058F6B9 /* ZYViewControllerExtension.swift */; };
-		8691D4221E975BD900309962 /* Animator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8691D4211E975BD900309962 /* Animator.swift */; };
-		8691D4241E975BE700309962 /* Ex_Dispatch_Once.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8691D4231E975BE700309962 /* Ex_Dispatch_Once.swift */; };
-		869492851E9C86470093AB2D /* RevolveAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 869492841E9C86470093AB2D /* RevolveAnimation.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,13 +48,20 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		0028AF791E93B34600B6B4C9 /* ScaleAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScaleAnimation.swift; sourceTree = "<group>"; };
+		0045E8511F6557DB0064A4CD /* AccumulateAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccumulateAnimation.swift; sourceTree = "<group>"; };
+		0045E8521F6557DB0064A4CD /* Animator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Animator.swift; sourceTree = "<group>"; };
+		0045E8531F6557DB0064A4CD /* BaseNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseNavigationController.swift; sourceTree = "<group>"; };
+		0045E8541F6557DB0064A4CD /* Ex_Dispatch_Once.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Ex_Dispatch_Once.swift; sourceTree = "<group>"; };
+		0045E8551F6557DB0064A4CD /* FlipOverAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FlipOverAnimation.swift; sourceTree = "<group>"; };
+		0045E8561F6557DB0064A4CD /* PiecesAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PiecesAnimation.swift; sourceTree = "<group>"; };
+		0045E8571F6557DB0064A4CD /* RevolveAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RevolveAnimation.swift; sourceTree = "<group>"; };
+		0045E8581F6557DB0064A4CD /* RoundAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundAnimation.swift; sourceTree = "<group>"; };
+		0045E8591F6557DB0064A4CD /* ScaleAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScaleAnimation.swift; sourceTree = "<group>"; };
+		0045E85A1F6557DB0064A4CD /* ZYViewControllerExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZYViewControllerExtension.swift; sourceTree = "<group>"; };
+		0045E85B1F6557DB0064A4CD /* left-arrow@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "left-arrow@2x.png"; sourceTree = "<group>"; };
+		0045E85C1F6557DB0064A4CD /* left-arrow@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "left-arrow@3x.png"; sourceTree = "<group>"; };
 		860011F11E8F8C12003C8967 /* PushViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PushViewController.swift; sourceTree = "<group>"; };
 		860011F21E8F8C12003C8967 /* PushViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PushViewController.xib; sourceTree = "<group>"; };
-		86022F361EDE6A9B007C2FB4 /* PiecesAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PiecesAnimation.swift; sourceTree = "<group>"; };
-		860997171E94874200612736 /* RoundAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundAnimation.swift; sourceTree = "<group>"; };
-		861EFFB61E95DBA4001C7CD5 /* FlipOverAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FlipOverAnimation.swift; sourceTree = "<group>"; };
-		861EFFB81E9603F7001C7CD5 /* AccumulateAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccumulateAnimation.swift; sourceTree = "<group>"; };
 		867ED5641E8DF6CD0058F6B9 /* Swift-RewritePushAndPop.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Swift-RewritePushAndPop.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		867ED5671E8DF6CD0058F6B9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		867ED5691E8DF6CD0058F6B9 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -68,13 +75,6 @@
 		867ED5831E8DF6CD0058F6B9 /* Swift-RewritePushAndPopUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Swift-RewritePushAndPopUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		867ED5871E8DF6CD0058F6B9 /* Swift_RewritePushAndPopUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Swift_RewritePushAndPopUITests.swift; sourceTree = "<group>"; };
 		867ED5891E8DF6CD0058F6B9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		867ED5961E8DF70D0058F6B9 /* BaseNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseNavigationController.swift; sourceTree = "<group>"; };
-		867ED5981E8DF8970058F6B9 /* left-arrow@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "left-arrow@2x.png"; sourceTree = "<group>"; };
-		867ED5991E8DF8970058F6B9 /* left-arrow@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "left-arrow@3x.png"; sourceTree = "<group>"; };
-		867ED5A41E8E43180058F6B9 /* ZYViewControllerExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZYViewControllerExtension.swift; sourceTree = "<group>"; };
-		8691D4211E975BD900309962 /* Animator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Animator.swift; sourceTree = "<group>"; };
-		8691D4231E975BE700309962 /* Ex_Dispatch_Once.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Ex_Dispatch_Once.swift; sourceTree = "<group>"; };
-		869492841E9C86470093AB2D /* RevolveAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RevolveAnimation.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,6 +102,25 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0045E8501F6557DB0064A4CD /* ZYPsuhPop */ = {
+			isa = PBXGroup;
+			children = (
+				0045E8511F6557DB0064A4CD /* AccumulateAnimation.swift */,
+				0045E8521F6557DB0064A4CD /* Animator.swift */,
+				0045E8531F6557DB0064A4CD /* BaseNavigationController.swift */,
+				0045E8541F6557DB0064A4CD /* Ex_Dispatch_Once.swift */,
+				0045E8551F6557DB0064A4CD /* FlipOverAnimation.swift */,
+				0045E8561F6557DB0064A4CD /* PiecesAnimation.swift */,
+				0045E8571F6557DB0064A4CD /* RevolveAnimation.swift */,
+				0045E8581F6557DB0064A4CD /* RoundAnimation.swift */,
+				0045E8591F6557DB0064A4CD /* ScaleAnimation.swift */,
+				0045E85A1F6557DB0064A4CD /* ZYViewControllerExtension.swift */,
+				0045E85B1F6557DB0064A4CD /* left-arrow@2x.png */,
+				0045E85C1F6557DB0064A4CD /* left-arrow@3x.png */,
+			);
+			path = ZYPsuhPop;
+			sourceTree = "<group>";
+		};
 		867ED55B1E8DF6CD0058F6B9 = {
 			isa = PBXGroup;
 			children = (
@@ -125,7 +144,7 @@
 		867ED5661E8DF6CD0058F6B9 /* Swift-RewritePushAndPop */ = {
 			isa = PBXGroup;
 			children = (
-				867ED5951E8DF6F60058F6B9 /* BaseConfiger */,
+				0045E8501F6557DB0064A4CD /* ZYPsuhPop */,
 				867ED5671E8DF6CD0058F6B9 /* AppDelegate.swift */,
 				867ED5691E8DF6CD0058F6B9 /* ViewController.swift */,
 				867ED56B1E8DF6CD0058F6B9 /* Main.storyboard */,
@@ -154,33 +173,6 @@
 				867ED5891E8DF6CD0058F6B9 /* Info.plist */,
 			);
 			path = "Swift-RewritePushAndPopUITests";
-			sourceTree = "<group>";
-		};
-		867ED5951E8DF6F60058F6B9 /* BaseConfiger */ = {
-			isa = PBXGroup;
-			children = (
-				8691D4251E975BF800309962 /* Theme */,
-				867ED5981E8DF8970058F6B9 /* left-arrow@2x.png */,
-				867ED5991E8DF8970058F6B9 /* left-arrow@3x.png */,
-				867ED5961E8DF70D0058F6B9 /* BaseNavigationController.swift */,
-				867ED5A41E8E43180058F6B9 /* ZYViewControllerExtension.swift */,
-				8691D4211E975BD900309962 /* Animator.swift */,
-				0028AF791E93B34600B6B4C9 /* ScaleAnimation.swift */,
-				860997171E94874200612736 /* RoundAnimation.swift */,
-				861EFFB61E95DBA4001C7CD5 /* FlipOverAnimation.swift */,
-				861EFFB81E9603F7001C7CD5 /* AccumulateAnimation.swift */,
-				869492841E9C86470093AB2D /* RevolveAnimation.swift */,
-				86022F361EDE6A9B007C2FB4 /* PiecesAnimation.swift */,
-			);
-			path = BaseConfiger;
-			sourceTree = "<group>";
-		};
-		8691D4251E975BF800309962 /* Theme */ = {
-			isa = PBXGroup;
-			children = (
-				8691D4231E975BE700309962 /* Ex_Dispatch_Once.swift */,
-			);
-			name = Theme;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -291,10 +283,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				867ED5721E8DF6CD0058F6B9 /* LaunchScreen.storyboard in Resources */,
-				867ED59A1E8DF8970058F6B9 /* left-arrow@2x.png in Resources */,
-				867ED59B1E8DF8970058F6B9 /* left-arrow@3x.png in Resources */,
 				867ED56F1E8DF6CD0058F6B9 /* Assets.xcassets in Resources */,
+				0045E8671F6557DB0064A4CD /* left-arrow@2x.png in Resources */,
 				860011F41E8F8C12003C8967 /* PushViewController.xib in Resources */,
+				0045E8681F6557DB0064A4CD /* left-arrow@3x.png in Resources */,
 				867ED56D1E8DF6CD0058F6B9 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -320,19 +312,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				869492851E9C86470093AB2D /* RevolveAnimation.swift in Sources */,
+				0045E8661F6557DB0064A4CD /* ZYViewControllerExtension.swift in Sources */,
+				0045E85E1F6557DB0064A4CD /* Animator.swift in Sources */,
+				0045E8611F6557DB0064A4CD /* FlipOverAnimation.swift in Sources */,
+				0045E8631F6557DB0064A4CD /* RevolveAnimation.swift in Sources */,
+				0045E85D1F6557DB0064A4CD /* AccumulateAnimation.swift in Sources */,
+				0045E85F1F6557DB0064A4CD /* BaseNavigationController.swift in Sources */,
 				867ED56A1E8DF6CD0058F6B9 /* ViewController.swift in Sources */,
-				8691D4241E975BE700309962 /* Ex_Dispatch_Once.swift in Sources */,
-				867ED5A51E8E43180058F6B9 /* ZYViewControllerExtension.swift in Sources */,
-				861EFFB91E9603F7001C7CD5 /* AccumulateAnimation.swift in Sources */,
-				0028AF7A1E93B34600B6B4C9 /* ScaleAnimation.swift in Sources */,
-				861EFFB71E95DBA4001C7CD5 /* FlipOverAnimation.swift in Sources */,
-				860997181E94874200612736 /* RoundAnimation.swift in Sources */,
 				867ED5681E8DF6CD0058F6B9 /* AppDelegate.swift in Sources */,
+				0045E8651F6557DB0064A4CD /* ScaleAnimation.swift in Sources */,
+				0045E8641F6557DB0064A4CD /* RoundAnimation.swift in Sources */,
 				860011F31E8F8C12003C8967 /* PushViewController.swift in Sources */,
-				8691D4221E975BD900309962 /* Animator.swift in Sources */,
-				86022F371EDE6A9B007C2FB4 /* PiecesAnimation.swift in Sources */,
-				867ED5971E8DF70D0058F6B9 /* BaseNavigationController.swift in Sources */,
+				0045E8601F6557DB0064A4CD /* Ex_Dispatch_Once.swift in Sources */,
+				0045E8621F6557DB0064A4CD /* PiecesAnimation.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

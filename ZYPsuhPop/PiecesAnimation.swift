@@ -14,7 +14,7 @@ class PiecesAnimation: NSObject {
     
     
     
-    func push(transitionsContext:UIViewControllerContextTransitioning){
+    func push(_ transitionsContext:UIViewControllerContextTransitioning){
         let formVC = transitionsContext.viewController(forKey: UITransitionContextViewControllerKey.from);
         let toVC = transitionsContext.viewController(forKey: UITransitionContextViewControllerKey.to);
         let duration = self.transitionDuration(using: transitionsContext);
@@ -28,12 +28,12 @@ class PiecesAnimation: NSObject {
         for i in 0..<count {
             let rect = CGRect.init(x: 0, y: bounds.size.height/CGFloat(count) * CGFloat(i), width: bounds.width, height: bounds.height/CGFloat(count));
             let coverV = CoverView.init(frame: CGRect.init(x: 0, y: -500, width: bounds.width, height: bounds.height/CGFloat(count)));
-            coverV.getRectView(viewC: toVC!, rect: rect);
+            coverV.getRectView(toVC!, rect: rect);
             coverV.tag = 2017 + i;
             formVC?.view.addSubview(coverV);
         }
         UserDefaults.standard.set((count), forKey: "count");
-        pushAnimation(duration: duration, ViewC: formVC!);
+        pushAnimation(duration, ViewC: formVC!);
         //延迟调用
         let delay = DispatchTime.now() + duration;
         DispatchQueue.main.asyncAfter(deadline: delay) {
@@ -46,7 +46,7 @@ class PiecesAnimation: NSObject {
         
         
     }
-    func pop(transitionsContext:UIViewControllerContextTransitioning){
+    func pop(_ transitionsContext:UIViewControllerContextTransitioning){
         let formVC = transitionsContext.viewController(forKey: UITransitionContextViewControllerKey.from);
         let toVC = transitionsContext.viewController(forKey: UITransitionContextViewControllerKey.to);
         let duration = self.transitionDuration(using: transitionsContext);
@@ -59,12 +59,12 @@ class PiecesAnimation: NSObject {
         for i in 0..<count {
             let rect = CGRect.init(x: 0, y: bounds.size.height/CGFloat(count) * CGFloat(i), width: bounds.width, height: bounds.height/CGFloat(count));
             let coverV = CoverView.init(frame: CGRect.init(x: 0, y: CGFloat(i) * bounds.height/CGFloat(count), width: bounds.width, height: bounds.height/CGFloat(count)));
-            coverV.getRectView(viewC: formVC!, rect: rect);
+            coverV.getRectView(formVC!, rect: rect);
             coverV.tag = 2016 + i;
             toVC?.view.addSubview(coverV);
         }
         UserDefaults.standard.set((count), forKey: "count");
-        popAnimation(duration: duration, ViewC: toVC!);
+        popAnimation(duration, ViewC: toVC!);
         //延迟调用
         let delay = DispatchTime.now() + duration;
         DispatchQueue.main.asyncAfter(deadline: delay) {
@@ -86,19 +86,19 @@ class PiecesAnimation: NSObject {
     func animateTransition(using transitionContext: UIViewControllerContextTransitioning) {
         
         if transitionType == UINavigationControllerOperation.push{
-            push(transitionsContext: transitionContext);
+            push(transitionContext);
         }else{
-            pop(transitionsContext: transitionContext);
+            pop(transitionContext);
         }
         
         
     }
     
-    func pushAnimation(duration:TimeInterval,ViewC:UIViewController) {
+    func pushAnimation(_ duration:TimeInterval,ViewC:UIViewController) {
         
    
     }
-    func popAnimation(duration:TimeInterval,ViewC:UIViewController){
+    func popAnimation(_ duration:TimeInterval,ViewC:UIViewController){
        
     }
 
@@ -111,7 +111,7 @@ class PiecesAnimation: NSObject {
  */
 class PCoverView: UIView {
     
-    func getRectView(viewC:UIViewController,rect:CGRect){
+    func getRectView(_ viewC:UIViewController,rect:CGRect){
         
         UIGraphicsBeginImageContextWithOptions(UIScreen.main.bounds.size, false, UIScreen.main.scale)
         let ref = UIGraphicsGetCurrentContext();

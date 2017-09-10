@@ -9,18 +9,18 @@
 import UIKit
 enum AnimationDirection {
     /**圆形*/
-    case Round
+    case round
     /**左右*/
-    case RightLeft
+    case rightLeft
     /**上下*/
-    case TopButtom
+    case topButtom
 }
 class RoundAnimation: NSObject ,UIViewControllerAnimatedTransitioning{
     
     var transitionType:UINavigationControllerOperation?;
     var animationDirection:AnimationDirection?;
     
-    func push(transitionsContext:UIViewControllerContextTransitioning){
+    func push(_ transitionsContext:UIViewControllerContextTransitioning){
         let formVC = transitionsContext.viewController(forKey: UITransitionContextViewControllerKey.from);
         let toVC = transitionsContext.viewController(forKey: UITransitionContextViewControllerKey.to);
         let duration = self.transitionDuration(using: transitionsContext);
@@ -45,11 +45,11 @@ class RoundAnimation: NSObject ,UIViewControllerAnimatedTransitioning{
         var startPath = UIBezierPath.init(ovalIn: frame);
         var endPath = UIBezierPath.init(ovalIn: CGRect.init(x: p4.x*1.5, y: -50, width: CGFloat(-maxRadiu), height: CGFloat(maxRadiu)));
         
-        if animationDirection == .RightLeft {
+        if animationDirection == .rightLeft {
             startPath = UIBezierPath.init(rect: CGRect.init(x:bounds.size.width, y: 0, width: 0, height: bounds.size.height));
             endPath = UIBezierPath.init(rect: CGRect.init(x: 0, y: 0, width: bounds.size.width, height: bounds.size.height));
             
-        }else if animationDirection == .TopButtom{
+        }else if animationDirection == .topButtom{
             
             startPath = UIBezierPath.init(rect: CGRect.init(x:0, y: bounds.size.height, width: bounds.size.width, height:0));
             endPath = UIBezierPath.init(rect: CGRect.init(x: 0, y: 0, width: bounds.size.width, height: bounds.size.height));
@@ -77,7 +77,7 @@ class RoundAnimation: NSObject ,UIViewControllerAnimatedTransitioning{
             transitionsContext.completeTransition(true);
         };
     }
-    func pop(transitionsContext:UIViewControllerContextTransitioning){
+    func pop(_ transitionsContext:UIViewControllerContextTransitioning){
         let formVC = transitionsContext.viewController(forKey: UITransitionContextViewControllerKey.from);
         let toVC = transitionsContext.viewController(forKey: UITransitionContextViewControllerKey.to);
         let duration = self.transitionDuration(using: transitionsContext);
@@ -106,11 +106,11 @@ class RoundAnimation: NSObject ,UIViewControllerAnimatedTransitioning{
         var endPath = UIBezierPath.init(ovalIn: frame);
         
         var startPath = UIBezierPath.init(ovalIn: CGRect.init(x: p4.x*1.5, y:0, width: CGFloat(-maxRadiu), height: CGFloat(maxRadiu)));
-        if animationDirection == .RightLeft {
+        if animationDirection == .rightLeft {
             endPath = UIBezierPath.init(rect: CGRect.init(x:bounds.size.width, y: 0, width: 0, height: bounds.size.height));
             startPath = UIBezierPath.init(rect: CGRect.init(x: 0, y: 0, width: bounds.size.width, height: bounds.size.height));
             
-        }else if animationDirection == .TopButtom{
+        }else if animationDirection == .topButtom{
             endPath = UIBezierPath.init(rect: CGRect.init(x:0, y: bounds.size.height, width: bounds.size.width, height:0));
             startPath = UIBezierPath.init(rect: CGRect.init(x: 0, y: 0, width: bounds.size.width, height: bounds.size.height));
             
@@ -146,9 +146,9 @@ class RoundAnimation: NSObject ,UIViewControllerAnimatedTransitioning{
     func animateTransition(using transitionContext: UIViewControllerContextTransitioning) {
         
         if transitionType == UINavigationControllerOperation.push{
-            push(transitionsContext: transitionContext);
+            push(transitionContext);
         }else{
-            pop(transitionsContext: transitionContext);
+            pop(transitionContext);
         }
         
         

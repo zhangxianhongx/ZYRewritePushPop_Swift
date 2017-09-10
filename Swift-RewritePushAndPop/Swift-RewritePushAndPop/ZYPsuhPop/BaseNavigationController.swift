@@ -8,9 +8,9 @@
 
 import UIKit
 import Foundation
-class BaseNavigationController: UINavigationController ,UINavigationControllerDelegate{
+public class BaseNavigationController: UINavigationController ,UINavigationControllerDelegate{
 
-    override func viewDidLoad() {
+    override public func viewDidLoad() {
         super.viewDidLoad()
         let attrDic = [NSFontAttributeName:UIFont.systemFont(ofSize: 17),NSForegroundColorAttributeName:UIColor.white];
         
@@ -25,37 +25,39 @@ class BaseNavigationController: UINavigationController ,UINavigationControllerDe
         self.view.addSubview(statusBarView);
         
     }
-    override func pushViewController(_ viewController: UIViewController, animated: Bool) {
+    override public func pushViewController(_ viewController: UIViewController, animated: Bool) {
+        
+        
         super.pushViewController(viewController, animated: animated);
         
         if self.viewControllers.count > 1{
             
-            self.createRightBarItemWithViewController(viewController: viewController);
-            self.createLeftBackBarItemWithViewController(viewController: viewController);
+            self.createRightBarItemWithViewController(viewController);
+            self.createLeftBackBarItemWithViewController(viewController);
         }
         
     }
-    override func popViewController(animated: Bool) -> UIViewController? {
+    override public func popViewController(animated: Bool) -> UIViewController? {
         let vc = super.popViewController(animated: animated);
         
         return vc;
     }
     
-    override func popToRootViewController(animated: Bool) -> [UIViewController]? {
+    override public func popToRootViewController(animated: Bool) -> [UIViewController]? {
         let vc = super.popToRootViewController(animated: animated);
         
         return vc;
         
     }
-    override func popToViewController(_ viewController: UIViewController, animated: Bool) -> [UIViewController]? {
+    override public func popToViewController(_ viewController: UIViewController, animated: Bool) -> [UIViewController]? {
         let vcs = super.popToViewController(viewController, animated: animated);
         
         return vcs;
     }
-    func createRightBarItemWithViewController(viewController:UIViewController){
+    func createRightBarItemWithViewController(_ viewController:UIViewController){
         
     }
-    func createLeftBackBarItemWithViewController(viewController:UIViewController){
+    func createLeftBackBarItemWithViewController(_ viewController:UIViewController){
         self.navigationItem.hidesBackButton = true;
         let backItem = UIButton.init(type: UIButtonType.custom);
         backItem.frame = CGRect.init(x: 0, y: 6, width: 32, height: 32);
@@ -75,22 +77,16 @@ class BaseNavigationController: UINavigationController ,UINavigationControllerDe
         }
     }
 //自定义动画
-    public func navigationController(_ navigationController: UINavigationController, animationControllerFor operation: UINavigationControllerOperation, from fromVC: UIViewController, to toVC: UIViewController) -> UIViewControllerAnimatedTransitioning?{
-        
+    open func navigationController(_ navigationController: UINavigationController, animationControllerFor operation: UINavigationControllerOperation, from fromVC: UIViewController, to toVC: UIViewController) -> UIViewControllerAnimatedTransitioning?{
+       
         if operation == UINavigationControllerOperation.push{
-            if toVC.animationType == nil{
-                
-                return nil;
-            }else{
-              return getAnimationWithAnimationType(animationTyp: toVC.animationType!,operation: operation);
-            }
+           
+              return getAnimationWithAnimationType(animationTyp: toVC.animationType,operation: operation);
+            
         }else{
-            if fromVC.animationType == nil{
-                
-                return nil;
-            }else{
-               return getAnimationWithAnimationType(animationTyp: fromVC.animationType!,operation: operation);
-            }
+           
+               return getAnimationWithAnimationType(animationTyp: fromVC.animationType,operation: operation);
+            
         }
        
     }

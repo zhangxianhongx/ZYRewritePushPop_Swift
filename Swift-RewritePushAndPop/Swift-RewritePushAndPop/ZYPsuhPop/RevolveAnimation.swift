@@ -1,69 +1,66 @@
 //
-//  FlipOverAnimation.swift
+//  RevolveAnimation.swift
 //  Swift-RewritePushAndPop
 //
-//  Created by ybon on 2017/4/6.
+//  Created by ybon on 2017/4/11.
 //  Copyright © 2017年 ybon. All rights reserved.
 //
 
 import UIKit
 
-class FlipOverAnimation: NSObject ,UIViewControllerAnimatedTransitioning{
+class RevolveAnimation: NSObject ,UIViewControllerAnimatedTransitioning{
     
     var transitionType:UINavigationControllerOperation?;
     
     
-    func push(transitionsContext:UIViewControllerContextTransitioning){
+    func push(_ transitionsContext:UIViewControllerContextTransitioning){
         let formVC = transitionsContext.viewController(forKey: UITransitionContextViewControllerKey.from);
         let toVC = transitionsContext.viewController(forKey: UITransitionContextViewControllerKey.to);
         let duration = self.transitionDuration(using: transitionsContext);
         let bounds = UIScreen.main.bounds;
         let containerView = transitionsContext.containerView;
-        containerView.addSubview((toVC?.view)!);
-        toVC?.view.frame = bounds;
-        toVC?.navigationController?.view.frame = bounds;
-
-        //设置动画的过度形式
         
-        let transR = UIViewAnimationTransition.flipFromRight;
- 
+        
+        containerView.addSubview((toVC?.view)!);
+        toVC?.view.layer.anchorPoint = CGPoint.init(x: 0.5, y: 2.0);
+        toVC?.view.frame = bounds;
+        let rotation = 0.5 * M_PI;
+        toVC?.view.transform = CGAffineTransform.init(rotationAngle: CGFloat(rotation));
         UIView.animate(withDuration: duration, animations: { 
-            
-            UIView.setAnimationTransition(transR, for: (toVC?.navigationController?.view)!, cache: false);
-            
-            }) { (isStop) in
-                 toVC?.view.center = containerView.center;
+            toVC?.view.transform = CGAffineTransform.identity;
+            }) { (isStope) in
+                toVC?.view.layer.anchorPoint = CGPoint.init(x: 0.5, y: 0.5);
+                toVC?.view.frame = bounds;
                 formVC?.view.isHidden = false;
                 transitionsContext.completeTransition(true);
         }
         
-        
-        
     }
-    func pop(transitionsContext:UIViewControllerContextTransitioning){
+    func pop(_ transitionsContext:UIViewControllerContextTransitioning){
         let formVC = transitionsContext.viewController(forKey: UITransitionContextViewControllerKey.from);
         let toVC = transitionsContext.viewController(forKey: UITransitionContextViewControllerKey.to);
         let duration = self.transitionDuration(using: transitionsContext);
         let bounds = UIScreen.main.bounds;
         let containerView = transitionsContext.containerView;
-        containerView.addSubview((toVC?.view)!);
         
-
-        formVC?.navigationController?.view.frame = bounds;
-        
-        let transL = UIViewAnimationTransition.flipFromLeft;
-        
+        containerView.insertSubview((toVC?.view)!, belowSubview: (formVC?.view)!);
+      formVC?.view.layer.anchorPoint = CGPoint.init(x: 0.5, y: 2.5);
+        formVC?.view.frame = bounds;
         UIView.animate(withDuration: duration, animations: {
             
-            UIView.setAnimationTransition(transL, for: (toVC?.navigationController?.view)!, cache: false);
-            
-        }) { (isStop) in
+//            formVC?.view.transform = CGAffineTransform.init(translationX: 300, y: 0);
+            let rotation = 0.122 * M_PI;
+            formVC?.view.transform = CGAffineTransform.init(rotationAngle: CGFloat(rotation));
+        }) { (isStope) in
+            formVC?.view.transform = CGAffineTransform.identity;
+             formVC?.view.layer.anchorPoint = CGPoint.init(x: 0.5, y: 0.5);
+    
             formVC?.view.center = containerView.center;
             toVC?.view.isHidden = false;
             transitionsContext.completeTransition(!transitionsContext.transitionWasCancelled);
         }
-
-       
+        
+        
     }
     
     func transitionDuration(using transitionContext: UIViewControllerContextTransitioning?) -> TimeInterval {
@@ -73,9 +70,9 @@ class FlipOverAnimation: NSObject ,UIViewControllerAnimatedTransitioning{
     func animateTransition(using transitionContext: UIViewControllerContextTransitioning) {
         
         if transitionType == UINavigationControllerOperation.push{
-            push(transitionsContext: transitionContext);
+            push(transitionContext);
         }else{
-            pop(transitionsContext: transitionContext);
+            pop(transitionContext);
         }
         
         

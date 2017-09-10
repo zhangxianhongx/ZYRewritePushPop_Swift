@@ -13,7 +13,7 @@ class ScaleAnimation: NSObject,UIViewControllerAnimatedTransitioning{
     var transitionType:UINavigationControllerOperation?;
     
     
-    func push(transitionsContext:UIViewControllerContextTransitioning){
+    func push(_ transitionsContext:UIViewControllerContextTransitioning){
         let formVC = transitionsContext.viewController(forKey: UITransitionContextViewControllerKey.from);
         let toVC = transitionsContext.viewController(forKey: UITransitionContextViewControllerKey.to);
         let duration = self.transitionDuration(using: transitionsContext);
@@ -40,7 +40,7 @@ class ScaleAnimation: NSObject,UIViewControllerAnimatedTransitioning{
        
         
     }
-    func pop(transitionsContext:UIViewControllerContextTransitioning){
+    func pop(_ transitionsContext:UIViewControllerContextTransitioning){
         let formVC = transitionsContext.viewController(forKey: UITransitionContextViewControllerKey.from);
         let toVC = transitionsContext.viewController(forKey: UITransitionContextViewControllerKey.to);
         let duration = self.transitionDuration(using: transitionsContext);
@@ -75,9 +75,9 @@ class ScaleAnimation: NSObject,UIViewControllerAnimatedTransitioning{
     func animateTransition(using transitionContext: UIViewControllerContextTransitioning) {
         
         if transitionType == UINavigationControllerOperation.push{
-            push(transitionsContext: transitionContext);
+            push(transitionContext);
         }else{
-            pop(transitionsContext: transitionContext);
+            pop(transitionContext);
         }
         
         

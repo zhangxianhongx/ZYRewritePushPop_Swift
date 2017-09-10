@@ -13,7 +13,7 @@ class Ex_Dispatch_Once: NSObject {
 
 public extension DispatchQueue {
     
-    private static var _onceTracker = [String]()
+    fileprivate static var _onceTracker = [String]()
     
     /**
      Executes a block of code, associated with a unique token, only once.  The code is thread safe and will
@@ -22,7 +22,7 @@ public extension DispatchQueue {
      - parameter token: A unique reverse DNS style name such as com.vectorform.<name> or a GUID
      - parameter block: Block to execute once
      */
-    public class func once(token: String, block:()->Void) {
+    public class func once(_ token: String, block:()->Void) {
         objc_sync_enter(self)
         defer { objc_sync_exit(self) }
         

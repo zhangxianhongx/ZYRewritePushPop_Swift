@@ -13,8 +13,8 @@ class Animator: NSObject,UIViewControllerAnimatedTransitioning {
     var transitionType:UINavigationControllerOperation?;
     var animationDuration:TimeInterval = 0.4
     
-    private var animationPushTypeStr:String? = nil
-    private var animationPopTypeStr:String? = nil
+    fileprivate var animationPushTypeStr:String? = nil
+    fileprivate var animationPopTypeStr:String? = nil
     
     init(animationKey: String?) {
         self.animationPushTypeStr = animationKey != nil ? animationKey! : "fade"
@@ -22,7 +22,7 @@ class Animator: NSObject,UIViewControllerAnimatedTransitioning {
     }
     
     
-    func push(transitionsContext:UIViewControllerContextTransitioning){
+    func push(_ transitionsContext:UIViewControllerContextTransitioning){
         let formVC = transitionsContext.viewController(forKey: UITransitionContextViewControllerKey.from);
         let toVC = transitionsContext.viewController(forKey: UITransitionContextViewControllerKey.to);
         let duration = self.transitionDuration(using: transitionsContext);
@@ -53,7 +53,7 @@ class Animator: NSObject,UIViewControllerAnimatedTransitioning {
         print("push--\(self.animationPushTypeStr)")
     }
     
-    func pop(transitionsContext:UIViewControllerContextTransitioning){
+    func pop(_ transitionsContext:UIViewControllerContextTransitioning){
         let formVC = transitionsContext.viewController(forKey: UITransitionContextViewControllerKey.from);
         let toVC = transitionsContext.viewController(forKey: UITransitionContextViewControllerKey.to);
         let duration = self.transitionDuration(using: transitionsContext);
@@ -90,9 +90,9 @@ class Animator: NSObject,UIViewControllerAnimatedTransitioning {
     func animateTransition(using transitionContext: UIViewControllerContextTransitioning) {
         
         if transitionType == UINavigationControllerOperation.push{
-            push(transitionsContext: transitionContext);
+            push(transitionContext);
         }else{
-            pop(transitionsContext: transitionContext);
+            pop(transitionContext);
         }
         
         
