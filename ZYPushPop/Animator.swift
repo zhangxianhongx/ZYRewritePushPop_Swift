@@ -10,7 +10,7 @@ import UIKit
 
 class Animator: NSObject,UIViewControllerAnimatedTransitioning {
 
-    var transitionType:UINavigationControllerOperation?;
+    var transitionType:UINavigationController.Operation?;
     var animationDuration:TimeInterval = 0.4
     
     fileprivate var animationPushTypeStr:String? = nil
@@ -38,7 +38,7 @@ class Animator: NSObject,UIViewControllerAnimatedTransitioning {
             print("默认动画")
             return
         }
-        animation.type = self.animationPushTypeStr!;
+        animation.type = CATransitionType(rawValue: self.animationPushTypeStr!);
         animation.duration = duration;
         containerView.layer.add(animation, forKey: self.animationPushTypeStr!);
         
@@ -50,7 +50,7 @@ class Animator: NSObject,UIViewControllerAnimatedTransitioning {
             formVC?.view.isHidden = false;
             transitionsContext.completeTransition(true);
         };
-        print("push--\(self.animationPushTypeStr)")
+        print("push--\(String(describing: self.animationPushTypeStr))")
     }
     
     func pop(_ transitionsContext:UIViewControllerContextTransitioning){
@@ -70,7 +70,7 @@ class Animator: NSObject,UIViewControllerAnimatedTransitioning {
             print("默认动画")
             return
         }
-        animation.type = self.animationPopTypeStr!;
+        animation.type = CATransitionType(rawValue: self.animationPopTypeStr!);
         animation.duration = duration;
         containerView.layer.add(animation, forKey: self.animationPopTypeStr!);
         //延迟调用
@@ -80,7 +80,7 @@ class Animator: NSObject,UIViewControllerAnimatedTransitioning {
             toVC?.view.isHidden = false;
             transitionsContext.completeTransition(!transitionsContext.transitionWasCancelled);
         };
-        print("pop--\(self.animationPopTypeStr)")
+        print("pop--\(String(describing: self.animationPopTypeStr))")
     }
     
     func transitionDuration(using transitionContext: UIViewControllerContextTransitioning?) -> TimeInterval {
@@ -89,7 +89,7 @@ class Animator: NSObject,UIViewControllerAnimatedTransitioning {
     
     func animateTransition(using transitionContext: UIViewControllerContextTransitioning) {
         
-        if transitionType == UINavigationControllerOperation.push{
+        if transitionType == UINavigationController.Operation.push{
             push(transitionContext);
         }else{
             pop(transitionContext);

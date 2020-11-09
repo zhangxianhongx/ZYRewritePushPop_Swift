@@ -70,7 +70,7 @@ import UIKit
  * 确定对象使用的哪一种动画
  * 新添加的动画需要在这里写出
  */
-func getAnimationWithAnimationType(animationTyp:UIViewControllerAnimationTypeName,operation:UINavigationControllerOperation)-> UIViewControllerAnimatedTransitioning?{
+func getAnimationWithAnimationType(animationTyp:UIViewControllerAnimationTypeName,operation:UINavigationController.Operation)-> UIViewControllerAnimatedTransitioning?{
     
     switch animationTyp {
     

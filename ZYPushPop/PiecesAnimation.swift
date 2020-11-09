@@ -10,7 +10,7 @@ import UIKit
 
 class PiecesAnimation: NSObject {
 
-    var transitionType:UINavigationControllerOperation?;
+    var transitionType:UINavigationController.Operation?;
     
     
     
@@ -85,7 +85,7 @@ class PiecesAnimation: NSObject {
     
     func animateTransition(using transitionContext: UIViewControllerContextTransitioning) {
         
-        if transitionType == UINavigationControllerOperation.push{
+        if transitionType == UINavigationController.Operation.push{
             push(transitionContext);
         }else{
             pop(transitionContext);
@@ -134,7 +134,7 @@ class PCoverView: UIView {
         UIGraphicsEndImageContext();
         
         let imageV = UIImageView.init(frame: self.bounds);
-        imageV.contentMode = UIViewContentMode.scaleAspectFit;
+        imageV.contentMode = UIView.ContentMode.scaleAspectFit;
         imageV.image = img2;
         self.addSubview(imageV);
     }

@@ -12,10 +12,13 @@ public class BaseNavigationController: UINavigationController ,UINavigationContr
 
     override public func viewDidLoad() {
         super.viewDidLoad()
-        let attrDic = [NSFontAttributeName:UIFont.systemFont(ofSize: 17),NSForegroundColorAttributeName:UIColor.white];
+        let attrDic = [NSAttributedString.Key.font:UIFont.systemFont(ofSize: 17),NSAttributedString.Key.foregroundColor:UIColor.white];
         
         self.navigationBar.titleTextAttributes = attrDic;
-        self.navigationBar.barTintColor = UIColor.init(colorLiteralRed: 26/255.0, green: 91/255.0, blue: 150/255.0, alpha: 1.0);
+//        self.navigationBar.barTintColor = UIColor.white
+        //18,150,219
+        self.navigationBar.barTintColor = UIColor.init(red: 18/255.0, green: 150/255.0, blue: 219/255.0, alpha: 1.0)
+        self.interactivePopGestureRecognizer?.delegate = self as? UIGestureRecognizerDelegate;
         self.delegate = self;
     }
     func setStatusColor(){
@@ -59,27 +62,27 @@ public class BaseNavigationController: UINavigationController ,UINavigationContr
     }
     func createLeftBackBarItemWithViewController(_ viewController:UIViewController){
         self.navigationItem.hidesBackButton = true;
-        let backItem = UIButton.init(type: UIButtonType.custom);
+        let backItem = UIButton.init(type: UIButton.ButtonType.custom);
         backItem.frame = CGRect.init(x: 0, y: 6, width: 32, height: 32);
-        backItem.setImage(UIImage.init(named: "left-arrow.png"), for: UIControlState.normal);
-        backItem.addTarget(self, action: #selector(backToParentView), for: UIControlEvents.touchUpInside);
+        backItem.setImage(UIImage.init(named: "left-arrow.png"), for: UIControl.State.normal);
+        backItem.addTarget(self, action: #selector(backToParentView), for: UIControl.Event.touchUpInside);
         let leftBarItem = UIBarButtonItem.init(customView: backItem);
         viewController.navigationItem.leftBarButtonItem = leftBarItem;
     }
     
-    func backToParentView(){
+    @objc func backToParentView(){
         if self.presentationController != nil && self.viewControllers.count == 1 {
             
             self.dismiss(animated: true, completion: nil);
         }else{
-            let vc = self.popViewController(animated: true);
-            print(vc?.classForCoder);
+            let _ = self.popViewController(animated: true);
+
         }
     }
 //自定义动画
-    open func navigationController(_ navigationController: UINavigationController, animationControllerFor operation: UINavigationControllerOperation, from fromVC: UIViewController, to toVC: UIViewController) -> UIViewControllerAnimatedTransitioning?{
+    open func navigationController(_ navigationController: UINavigationController, animationControllerFor operation: UINavigationController.Operation, from fromVC: UIViewController, to toVC: UIViewController) -> UIViewControllerAnimatedTransitioning?{
        
-        if operation == UINavigationControllerOperation.push{
+        if operation == UINavigationController.Operation.push{
            
               return getAnimationWithAnimationType(animationTyp: toVC.animationType,operation: operation);
             

@@ -10,7 +10,7 @@ import UIKit
 
 class FlipOverAnimation: NSObject ,UIViewControllerAnimatedTransitioning{
     
-    var transitionType:UINavigationControllerOperation?;
+    var transitionType:UINavigationController.Operation?;
     
     
     func push(_ transitionsContext:UIViewControllerContextTransitioning){
@@ -25,7 +25,7 @@ class FlipOverAnimation: NSObject ,UIViewControllerAnimatedTransitioning{
 
         //设置动画的过度形式
         
-        let transR = UIViewAnimationTransition.flipFromRight;
+        let transR = UIView.AnimationTransition.flipFromRight;
  
         UIView.animate(withDuration: duration, animations: { 
             
@@ -51,7 +51,7 @@ class FlipOverAnimation: NSObject ,UIViewControllerAnimatedTransitioning{
 
         formVC?.navigationController?.view.frame = bounds;
         
-        let transL = UIViewAnimationTransition.flipFromLeft;
+        let transL = UIView.AnimationTransition.flipFromLeft;
         
         UIView.animate(withDuration: duration, animations: {
             
@@ -72,7 +72,7 @@ class FlipOverAnimation: NSObject ,UIViewControllerAnimatedTransitioning{
     
     func animateTransition(using transitionContext: UIViewControllerContextTransitioning) {
         
-        if transitionType == UINavigationControllerOperation.push{
+        if transitionType == UINavigationController.Operation.push{
             push(transitionContext);
         }else{
             pop(transitionContext);

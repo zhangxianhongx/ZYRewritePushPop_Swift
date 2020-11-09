@@ -10,7 +10,7 @@ import UIKit
 
 class ScaleAnimation: NSObject,UIViewControllerAnimatedTransitioning{
     
-    var transitionType:UINavigationControllerOperation?;
+    var transitionType:UINavigationController.Operation?;
     
     
     func push(_ transitionsContext:UIViewControllerContextTransitioning){
@@ -74,7 +74,7 @@ class ScaleAnimation: NSObject,UIViewControllerAnimatedTransitioning{
     
     func animateTransition(using transitionContext: UIViewControllerContextTransitioning) {
         
-        if transitionType == UINavigationControllerOperation.push{
+        if transitionType == UINavigationController.Operation.push{
             push(transitionContext);
         }else{
             pop(transitionContext);

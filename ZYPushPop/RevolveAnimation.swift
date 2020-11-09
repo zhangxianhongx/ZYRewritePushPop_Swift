@@ -10,7 +10,7 @@ import UIKit
 
 class RevolveAnimation: NSObject ,UIViewControllerAnimatedTransitioning{
     
-    var transitionType:UINavigationControllerOperation?;
+    var transitionType:UINavigationController.Operation?;
     
     
     func push(_ transitionsContext:UIViewControllerContextTransitioning){
@@ -69,7 +69,7 @@ class RevolveAnimation: NSObject ,UIViewControllerAnimatedTransitioning{
     
     func animateTransition(using transitionContext: UIViewControllerContextTransitioning) {
         
-        if transitionType == UINavigationControllerOperation.push{
+        if transitionType == UINavigationController.Operation.push{
             push(transitionContext);
         }else{
             pop(transitionContext);

@@ -17,7 +17,7 @@ enum AnimationDirection {
 }
 class RoundAnimation: NSObject ,UIViewControllerAnimatedTransitioning{
     
-    var transitionType:UINavigationControllerOperation?;
+    var transitionType:UINavigationController.Operation?;
     var animationDirection:AnimationDirection?;
     
     func push(_ transitionsContext:UIViewControllerContextTransitioning){
@@ -62,7 +62,7 @@ class RoundAnimation: NSObject ,UIViewControllerAnimatedTransitioning{
         animation.fromValue = startPath.cgPath;
         animation.toValue = endPath.cgPath;
         animation.duration = duration;
-        animation.timingFunction = CAMediaTimingFunction.init(name: kCAMediaTimingFunctionEaseOut);
+        animation.timingFunction = CAMediaTimingFunction.init(name: CAMediaTimingFunctionName.easeOut);
         maskLayer.add(animation, forKey: "startAnimation");
        
         
@@ -123,7 +123,7 @@ class RoundAnimation: NSObject ,UIViewControllerAnimatedTransitioning{
         animation.fromValue = startPath.cgPath;
         animation.toValue = endPath.cgPath;
         animation.duration = duration;
-        animation.timingFunction = CAMediaTimingFunction.init(name: kCAMediaTimingFunctionEaseOut);
+        animation.timingFunction = CAMediaTimingFunction.init(name: CAMediaTimingFunctionName.easeOut);
         maskLayer.add(animation, forKey: "endAnimation");
 
         
@@ -145,7 +145,7 @@ class RoundAnimation: NSObject ,UIViewControllerAnimatedTransitioning{
     
     func animateTransition(using transitionContext: UIViewControllerContextTransitioning) {
         
-        if transitionType == UINavigationControllerOperation.push{
+        if transitionType == UINavigationController.Operation.push{
             push(transitionContext);
         }else{
             pop(transitionContext);
