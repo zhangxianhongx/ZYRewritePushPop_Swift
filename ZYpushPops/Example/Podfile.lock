@@ -1,0 +1,16 @@
+PODS:
+  - ZYpushPops (0.1.0)
+
+DEPENDENCIES:
+  - ZYpushPops (from `../`)
+
+EXTERNAL SOURCES:
+  ZYpushPops:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  ZYpushPops: 69ccf65c560a8d53e3b86811262b793a7ce4a926
+
+PODFILE CHECKSUM: 56a1c4bf4301085017bb38272c32b4b6f1ed5f4e
+
+COCOAPODS: 1.9.3

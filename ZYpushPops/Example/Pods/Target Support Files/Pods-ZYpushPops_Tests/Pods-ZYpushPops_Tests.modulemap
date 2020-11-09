@@ -1,0 +1,6 @@
+framework module Pods_ZYpushPops_Tests {
+  umbrella header "Pods-ZYpushPops_Tests-umbrella.h"
+
+  export *
+  module * { export * }
+}

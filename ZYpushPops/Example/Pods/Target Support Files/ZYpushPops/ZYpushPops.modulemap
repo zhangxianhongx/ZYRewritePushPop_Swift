@@ -1,0 +1,6 @@
+framework module ZYpushPops {
+  umbrella header "ZYpushPops-umbrella.h"
+
+  export *
+  module * { export * }
+}

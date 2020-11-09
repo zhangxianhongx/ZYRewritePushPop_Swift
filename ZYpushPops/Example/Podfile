@@ -1,0 +1,11 @@
+use_frameworks!
+
+target 'ZYpushPops_Example' do
+  pod 'ZYpushPops', :path => '../'
+
+  target 'ZYpushPops_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end
