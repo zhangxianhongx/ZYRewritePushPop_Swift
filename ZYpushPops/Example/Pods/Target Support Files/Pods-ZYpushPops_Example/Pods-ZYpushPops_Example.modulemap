@@ -1,6 +1,0 @@
-framework module Pods_ZYpushPops_Example {
-  umbrella header "Pods-ZYpushPops_Example-umbrella.h"
-
-  export *
-  module * { export * }
-}
